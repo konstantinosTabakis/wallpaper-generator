@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    min-height: 100vh !important;
+    position: relative !important;
+    overflow: hidden !important ;
+    width: 100% !important;
+    background: rgb(201, 231, 221);
+}
+.shape{
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+ 
+ 
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width: 500px;
+    background-color: #fff;
+    border: 1px solid black;
+    z-index: 10;
+}
+.utils{
+    position: absolute;
+    top: 2%;
+    left: -180px;
+    /* left: 2%; */
+    padding: 1rem 3rem 1rem 1rem;
+    background: #0000000d;
+    z-index: 100;
+    border-radius: 12px;
+    transition: 1.5s;
+    animation: fadeIn ;
+}
+.utils.open{
+    left: 2%;
+}
+.utils .left{
+    display: none;
+}
+.utils.open .right{
+    display: none;
+}
+.utils.open .left{
+    display: block;
+}
+.utils img{
+    width: 80px;
+    cursor: pointer;
+}
+.utils .arrow{
+    width: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    position: absolute;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
