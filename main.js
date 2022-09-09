@@ -31,7 +31,7 @@ function generateRandom(min, max) {
 }
 function getColors(numberOfColors){
     let colors=[]
-    for(let i=0; i< Math.ceil(numberOfColors/4);i++){
+    for(let i=0; i< Math.ceil(numberOfColors/5);i++){
         colors= [...colors,...palettes[generateRandom(0,palettes.length)].color]
     }
     return colors
